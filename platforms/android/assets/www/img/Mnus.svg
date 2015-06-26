@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="63px" height="63px" viewBox="0 0 63 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Mnus</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Items-Categories" sketch:type="MSArtboardGroup" transform="translate(-99.000000, -517.000000)">
+            <g id="Card-1" sketch:type="MSLayerGroup" transform="translate(28.337412, 480.000000)">
+                <g id="Mnus" transform="translate(71.000000, 37.629395)" sketch:type="MSShapeGroup">
+                    <path d="M12.097561,0 L49.902439,0 C56.5833171,0 62,5.41517073 62,12.0960488 L62,49.9009268 C62,56.5833171 56.5833171,62 49.902439,62 L12.097561,62 C5.41668293,62 0,56.5833171 0,49.9009268 L0,12.0960488 C0,5.41517073 5.41668293,0 12.097561,0" id="bg" fill="#47A0DB"></path>
+                    <path d="M13.6097561,28.7317073 L13.6097561,33.2682927 L48.3887317,33.2682927 L48.3887317,28.7317073 L13.6097561,28.7317073 Z" id="minus" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

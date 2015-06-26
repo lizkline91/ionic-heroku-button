@@ -1,0 +1,88 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+
+
+<ion-side-menus enable-menu-with-back-views="true">
+
+<ion-side-menu-content>
+
+<ion-header-bar class="bar-clear" align-title="center">
+      <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+
+      <h1 class="title">Manja Home</h1>
+
+      <!--<button ui-sref="cart" class="button button-icon"><img src="img/basket_empty.svg" style="height: 20px;"></button>-->
+      <button ui-sref="cart" class="button button-icon basket-icon"><img src="img/basket_empty.svg" style="height: 20px;" ng-if="cartNumber.length <= 0"><img src="img/basket_with_item.svg" style="height: 20px;" ng-if="cartNumber.length > 0"></button>
+
+</ion-header-bar>
+
+<ion-content class="no-header" style="top: 0;">
+  <ion-list>
+  <ion-item class="no-padding"><img src="img/Drinks_BG_Photo.png" style="width: 100%;" ui-sref="gallery.soda"><h1 class="image-center" ui-sref="gallery.soda">Drinks</h1></ion-item>
+  <ion-item class="no-padding"><img src="img/Food_BG_Photo.png" style="width: 100%;"  ui-sref="food"><h1 class="image-center" ui-sref="food">Food</h1></ion-item>
+  <ion-item class="no-padding"><img src="img/Snacks_BG_Photo.png" style="width: 100%;"  ui-sref="snacks"><h1 class="image-center" ui-sref="snacks">Snacks</h1></ion-item>
+  <ion-item class="no-padding"><img src="img/Swag_BG_Photo.png" style="width: 100%;"  ui-sref="swag"><h1 class="image-center" ui-sref="swag">Swag</h1></ion-item>
+  </ion-list>
+
+
+
+
+</ion-content>
+
+</ion-side-menu-content>
+
+<!-- Left menu -->
+<ion-side-menu side="left">
+  <ion-content class="side-bg">
+    <ul class="list">
+
+    <div class="row">
+    <div class="col col-50 col-offset-25 text-center">
+        <img src="img/manja.png" style="width: 100px">
+    </div>
+    </div>
+
+
+      <a class="item item-icon-left" ui-sref="passwordChange">
+        <i class="icon ion-android-lock"></i>
+        Change Password
+      </a>
+
+      <a class="item item-icon-left" id="customButton">
+        <i class="icon ion-card"></i>
+        Payment Info
+      </a>
+
+      <a class="item item-icon-left" href="#/privacy">
+        <i class="icon ion-key"></i>
+        Privacy Policy
+      </a>
+
+      <a class="item item-icon-left" href="#">
+        <i class="icon ion-android-list"></i>
+        Terms of Use
+      </a>
+
+      <a class="item item-icon-left" href="mailto:support@manja.io">
+        <i class="icon ion-compose"></i>
+        Contact
+      </a>
+
+      <a class="item item-icon-left" ng-click="logout()">
+        <i class="icon ion-power"></i>
+        Logout
+      </a>
+
+
+    </ul>
+
+  </ion-content>
+
+</ion-side-menu>
+
+</ion-side-menus>
+

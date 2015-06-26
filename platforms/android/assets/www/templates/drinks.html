@@ -1,0 +1,170 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+
+<ion-nav-bar class="bar-stable" align-title="center">
+      <ion-nav-buttons side="left">
+      <button ui-sref="loginHome" class="button button-icon icon ion-navicon"></button>
+      </ion-nav-buttons>
+
+      <ion-nav-buttons side="right">
+      <button ui-sref="shopping-cart" class="button button-icon icon ion-ios-cart"></button>
+      </ion-nav-buttons>
+
+</ion-nav-bar>
+
+
+
+<ion-tabs class="tabs-top tabs-striped">
+
+  <ion-tab title="Water & Soda" href="#/drinks/soda">
+    <ion-nav-view name="soda-tab"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="Beer" href="#/drinks/beer">
+    <ion-nav-view name="beer-tab"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="Other" href="#/drinks/other">
+    <ion-nav-view name="other-tab"></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>
+
+
+
+
+<!--
+<ion-content class="padding morePadding drinks-bg">
+
+  <div class="row">
+    <div class="col col-50">
+      <div class="list card">
+        <a class="item item-icon-right balanced drink-bg" href="#">
+          <i class="icon ion-plus-round"></i>
+        </a>
+
+        <div class="item item-image drink-bg">
+          <img src="img/dasani.png" style="width: 50px; height: 150px;">
+        </div>
+
+        <div class="row">
+          <div class="col col-80"><strong>Dasani Water</strong><br>16.9 FL OZ.</div>
+          <div class="col col-20 col-top balanced" style="text-align: right; font-size: 16px;"><strong>$3</strong></div>
+        </div>
+
+        <div class="row">
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col col-50">
+      <div class="list card">
+        <a class="item item-icon-right balanced drink-bg" href="#">
+          <i class="icon ion-plus-round"></i>
+        </a>
+
+        <div class="item item-image drink-bg">
+          <img src="img/coke.png" style="width: 50px; height: 150px;">
+        </div>
+
+        <div class="row">
+          <div class="col col-80"><strong>Coca Cola</strong><br>16.9 FL OZ.</div>
+          <div class="col col-20 col-top balanced" style="text-align: right; font-size: 16px;"><strong>$3</strong></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col col-50">
+      <div class="list card">
+        <a class="item item-icon-right balanced drink-bg" href="#">
+          <i class="icon ion-plus-round"></i>
+        </a>
+
+        <div class="item item-image drink-bg">
+          <img src="img/zero.png" style="width: 50px; height: 150px;">
+        </div>
+
+        <div class="row">
+          <div class="col col-80"><strong>Coca Cola Zero</strong><br>16.9 FL OZ.</div>
+          <div class="col col-20 col-top balanced" style="text-align: right; font-size: 16px;"><strong>$3</strong></div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="col col-50">
+      <div class="list card">
+        <a class="item item-icon-right balanced drink-bg" href="#">
+          <i class="icon ion-plus-round"></i>
+        </a>
+
+        <div class="item item-image drink-bg">
+          <img src="img/diet.png" style="width: 50px; height: 150px;">
+        </div>
+
+        <div class="row">
+          <div class="col col-80"><strong>Diet Coke</strong><br>16.9 FL OZ.</div>
+          <div class="col col-20 col-top balanced" style="text-align: right; font-size: 16px;"><strong>$3</strong></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="row">
+    <div class="col col-50">
+      <div class="list card">
+        <a class="item item-icon-right balanced drink-bg" href="#">
+          <i class="icon ion-plus-round"></i>
+        </a>
+
+        <div class="item item-image drink-bg">
+          <img src="img/sprite.png" style="width: 50px; height: 150px;">
+        </div>
+
+        <div class="row">
+          <div class="col col-80"><strong>Sprite</strong><br>16.9 FL OZ.</div>
+          <div class="col col-20 col-top balanced" style="text-align: right; font-size: 16px;"><strong>$3</strong></div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="col col-50">
+      <div class="list card">
+        <a class="item item-icon-right balanced drink-bg" href="#">
+          <i class="icon ion-plus-round"></i>
+        </a>
+
+        <div class="item item-image drink-bg">
+          <img src="img/drpepper.png" style="width: 50px; height: 150px;">
+        </div>
+
+        <div class="row">
+          <div class="col col-80"><strong>Dr. Pepper</strong><br>16.9 FL OZ.</div>
+          <div class="col col-20 col-top balanced" style="text-align: right; font-size: 16px;"><strong>$3</strong></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</ion-content>
+-->
+

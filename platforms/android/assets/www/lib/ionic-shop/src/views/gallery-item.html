@@ -1,0 +1,100 @@
+<!--<div class='ion-gallery-content'>
+  <div class='card gallery-card' ng-repeat='product in products track by $index'>
+    <div class='item gallery-item'>
+      <div class='gallery-image-div'>
+        <img ng-src='{{product.images[0]}}' class='gallery-product-image'>
+      </div>
+      <h3 class='gallery-product-title'>{{product.title}}</h3>
+      <h3 class='gallery-product-price'>${{product.price}}</h3>
+      <div class='gallery-product-add' ng-click='addToCart(product)'>
+        <h3 class='gallery-product-add-title' cart-add>{{addText}}</h3>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+<div class="ion-gallery-content">
+
+<div ng-repeat='product in (filteredProducts = (products | filter:{category: category}))'>
+  <div class="row" ng-if="$even">
+    <div class="col col-50">
+      <div class="list card">
+
+      <div class="row no-padding">
+        <div class="col col-33 no-padding text-center drink-bg">
+          <div class="item drink-bg">
+            <img src="img/Mnus.svg" width="24" ng-click='removeProduct(filteredProducts[$index])' ng-show='filteredProducts[$index].purchaseQuantity > 0'>
+          </div>
+        </div>
+        <div class="col col-33 no-padding text-center drink-bg">
+            <p class="item drink-bg" style="font-size: 16px" ng-show='filteredProducts[$index].purchaseQuantity > 0'>x{{filteredProducts[$index].purchaseQuantity}}</p>
+        </div>
+        <div class="col col-33 no-padding text-center">
+          <div class="item drink-bg">
+            <img src="img/Plussed.svg" ng-click='addToCart(filteredProducts[$index])' width="24">
+          </div>
+        </div>
+      </div>
+
+        <div class="item item-image drink-bg">
+          <div class="row">
+          <div class="col">
+          <img class="text-center" ng-src='{{filteredProducts[$index].images[0]}}' style="height: 130px; width: auto;">
+          </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-80"><strong>{{filteredProducts[$index].title}}</strong><br>{{filteredProducts[$index].description}}</div>
+          <div class="col col-20 col-top balanced" style="text-align: right; font-size: 16px;"><strong>${{filteredProducts[$index].price}}</strong></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col col-50" ng-if="filteredProducts[$index+1]">
+      <div class="list card">
+
+      <div class="row no-padding">
+        <div class="col col-33 no-padding text-center drink-bg">
+          <div class="item drink-bg">
+            <img src="img/Mnus.svg" width="24" ng-click='removeProduct(filteredProducts[$index+1])' ng-show='filteredProducts[$index+1].purchaseQuantity > 0'>
+          </div>
+        </div>
+        <div class="col col-33 no-padding text-center drink-bg">
+            <p class="item drink-bg" style="font-size: 16px" ng-show='filteredProducts[$index+1].purchaseQuantity > 0'>x{{filteredProducts[$index+1].purchaseQuantity}}</p>
+        </div>
+        <div class="col col-33 no-padding text-center">
+          <div class="item drink-bg">
+            <img src="img/Plussed.svg" width="24" ng-click='addToCart(filteredProducts[$index+1])'>
+
+          </div>
+        </div>
+      </div>
+
+        <div class="item item-image drink-bg">
+          <div class="row">
+          <div class="col">
+          <img ng-src='{{filteredProducts[$index+1].images[0]}}' style="height: 130px; width: auto">
+          </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-80"><strong>{{filteredProducts[$index+1].title}}</strong><br>{{filteredProducts[$index+1].description}}</div>
+          <div class="col col-20 col-top balanced" style="text-align: right; font-size: 16px;"><strong>${{filteredProducts[$index+1].price}}</strong></div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+</div>
+
+  
+
+
+</div>

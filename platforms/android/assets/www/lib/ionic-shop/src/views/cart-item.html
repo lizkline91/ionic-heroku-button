@@ -1,0 +1,122 @@
+<div ng-if='!emptyProducts'>
+
+
+	<ul class="list">
+		<li class="item" ng-repeat='product in products track by $index'>
+			<div class="row">
+
+				<div class="col col-30">
+					<div class="item drink-bg text-center">
+						<img ng-src='{{product.images[0]}}' style="height: 80px;">
+					</div>
+				</div>
+
+				<div class="col col-30">
+					<div class="item" style="border: none;">
+						<strong>{{product.title}}</strong><br/>
+						<small>{{product.description}}</small><br/><br/>
+						<p>${{product.price}}</p>
+					</div>
+				</div>
+
+				<div class="col col-40">
+					<div class="row" style="padding-top: 35px">
+						<div class="col text-center">
+				        	<img src="img/Mnus.svg" width="24" style="padding-top: 2px" ng-click='removeProduct(product)'>
+				        </div>
+				        <div class="col text-center">
+				        	<h1 style="font-size: 24px;">{{product.purchaseQuantity}}</h1>
+				        </div>
+				        <div class="col text-center">
+				        	<img src="img/Plussed.svg" width="24" style="padding-top: 2px" ng-click='addProduct(product)'>
+				        </div>
+				    </div>
+				</div>
+
+			</div>
+		</li>
+
+		<li class="item">
+			<div class="row">
+				<div class="col" style="padding-top: 25px">
+					<h2>Tip?</h2>
+				</div>
+				<div class="col">
+					<ion-radio ng-click="updateTip(0)" icon="none">$0</ion-radio>
+				</div>
+				<div class="col">
+					<ion-radio ng-click="updateTip(1)" icon="none">$1</ion-radio>
+				</div>
+				<div class="col">
+					<ion-radio ng-click="updateTip(2)" icon="none">$2</ion-radio>
+				</div>
+				<div class="col">
+					<ion-radio ng-click="showPopup()" icon="none">...</ion-radio>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<p><small>Sub-Total</small></p>
+				</div>
+				<div class="col text-right">
+					<p><small>${{subTotal}}</small></p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<p><small>Delivery Fee</small></p>
+				</div>
+				<div class="col text-right">
+					<p><small>$3.00</small></p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<p><small>Tip</small></p>
+				</div>
+				<div class="col text-right">
+					<p><small>${{tip}}</small></p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<p>TOTAL</p>
+				</div>
+				<div class="col text-right">
+					<p>${{total}}</p>
+				</div>
+			</div>
+		</li>
+
+	</ul>
+
+  	<button class="button button-block button-balanced" path='checkoutPath' ui-sref='seat' ng-click="calcTotal()">Select Seat</button>
+
+
+	</ul>
+
+
+  <div>
+    <br><br><br><br>
+  </div>
+</div>
+
+<div class='empty-cart-div text-center' ng-if='emptyProducts'>
+
+  <div class="row row-center">
+  <div class="col col-80 col-offset-10" style="text-align: center;"><img src="img/manja.png" style="width: 200px;">
+  </div>
+  </div>
+
+  <div class="row row-center">
+  <div class="col col-80 col-offset-10 home-text"><p>Woops. Your bag is empty.</p>
+  <h1><i class='icon ion-bag'></i></h1>
+  </div>
+  </div>
+
+  
+</div>

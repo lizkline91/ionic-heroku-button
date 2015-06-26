@@ -1,0 +1,39 @@
+<ion-view view-title="Food">
+
+<ion-nav-bar class="bar-stable" align-title="center">
+      <ion-nav-buttons side="left">
+      <button ui-sref="manja-home" class="button button-icon icon ion-android-arrow-back"></button>
+      </ion-nav-buttons>
+
+      <ion-nav-buttons side="right">
+
+      <button ui-sref="cart" class="button button-icon basket-icon"><img ng-if="cartNumber.length <= 0" ng-src="img/basket_empty.svg" style="height: 20px;"><img ng-if="cartNumber.length > 0" ng-src="img/basket_with_item.svg" style="height: 20px;"></button>
+
+      </ion-nav-buttons>
+
+</ion-nav-bar>
+
+
+<ion-content class="padding morePadding drinks-bg">
+  <ion-gallery products='products' category="food"></ion-gallery>
+</ion-content>
+
+</ion-view>
+
+
+
+
+
+<!--<ion-header-bar class="bar-dark">
+  <h1 class="title">Ionic Shopping Cart</h1>
+  <button class='button icon ion-bag' ng-click='goToCart()'></button>
+</ion-header-bar>
+
+<ion-content>
+  <ion-gallery products='products'></ion-gallery>
+</ion-content>-->
+
+
+
+
+<!-- <ion-cart-footer path='checkoutPath'></ion-cart-footer> -->
