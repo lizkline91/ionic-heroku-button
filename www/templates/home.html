@@ -1,0 +1,41 @@
+<ion-view view-title="Dashboard" name="tab-dash">
+  <ion-content class="padding">
+
+  <div class="row row-center">
+  <div class="col col-80 col-offset-10" style="text-align: center;"><img src="img/manja.png" style="width: 200px;">
+  </div>
+  </div>
+
+  <div class="row row-center">
+  <div class="col col-80 col-offset-10 home-text" style="text-align:center;"><p>Log in to get food, drinks, <br/>and swag directly to your seat.</p>
+  </div>
+  </div>
+
+
+
+<div class="padding">
+	<div class="list list-inset">
+		<label class="item item-input">
+			<input type="text" placeholder="Email" ng-model="login.username">
+		</label>
+		<br>
+		<label class="item item-input">
+			<input type="password" placeholder="password" ng-model="login.password">
+		</label>
+	</div>
+</div>
+<div class="padding">
+<button ng-click="signin()"  class="button button-positive button-block fb-bg">
+		Sign In
+</button>
+</div>
+<div class="padding">
+		<button class="button button-light button-block" ng-click="showSignUp()">Sign up</button>
+</div>
+
+
+  </ion-content>
+</ion-view>
+
+
+

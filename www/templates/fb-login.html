@@ -1,0 +1,42 @@
+<ion-view title="Sign In">
+    <ion-nav-bar class="bar-stable" align-title="center">
+      <ion-nav-buttons side="left">
+      <button ui-sref="loginHome" class="button button-icon icon ion-android-arrow-back"></button>
+      </ion-nav-buttons>
+
+    </ion-nav-bar>
+
+  <ion-content class="padding">
+    <div class="row row-center">
+    <div class="col col-80 col-offset-10" style="text-align: center;"><img src="img/manja.png" style="width: 200px;">
+    </div>
+    </div>
+
+    <div class="row row-center">
+    <div class="col col-80 col-offset-10 home-text"><p>Please provide us<br/> the following information to make<br/> sure we fulfill your order.</p>
+    </div>
+    </div>
+
+    <div class="list">
+    <label class="item item-input top">
+    <input type="text" placeholder="Full Name" ng-model="login.name" ng-model="login.name" >
+    </label>
+
+    <label class="item item-input bottom">
+    <input type="text" placeholder="Email" ng-model="login.email">
+    </label>
+
+
+    <label class="item item-input bottom">
+    <input type="tel" placeholder="Phone Number" ng-model="login.phone">
+    </label>
+    </div>
+
+
+  </ion-content>
+
+<div class="bar bar-footer bar-balanced">
+  <div class="title" style="padding-top: 5px;"><button class="button button-clear" ng-click="submit()">OK</button></div>
+
+</div>
+</ion-view>

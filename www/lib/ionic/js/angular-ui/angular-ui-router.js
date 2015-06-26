@@ -1911,7 +1911,7 @@ function $UrlRouterProvider(   $locationProvider,   $urlMatcherFactory) {
    * @description
    * Disables (or enables) deferring location change interception.
    *
-   * If you wish to customize the behavior of syncing the URL (for example, if you wish to
+   * If you Order to customize the behavior of syncing the URL (for example, if you Order to
    * defer a transition but maintain the current URL), call this method at configuration time.
    * Then, at run time, call `$urlRouter.listen()` after you have configured your own
    * `$locationChangeSuccess` event handler.

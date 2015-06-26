@@ -1,0 +1,74 @@
+<ion-view view-title="" name="tab-dash">
+  <ion-content>
+
+<ion-nav-bar class="bar-clear" align-title="center">
+
+      <ion-nav-buttons side="right">
+      <button ui-sref="start" class="button button-icon icon ion-android-close" ng-click="startApp()"></button>
+      </ion-nav-buttons>
+
+</ion-nav-bar>
+
+<ion-slide-box active-slide="myActiveSlide">
+  <ion-slide class="padding blue-bg">
+    <div class="box"><img class="tutorial-image" style="padding-top: 25px;" src="img/T1_image.png"></div>
+
+
+    <div class="info-text home-text">
+        <h3>Add a payment method</h3>
+        <p>We use military grade AES-256<br/>bit encryption</p>
+    </div>
+
+  </ion-slide>
+
+
+  <ion-slide class="padding blue-bg">
+    <div class="box"><img class="tutorial-image" style="padding-top: 25px;" src="img/T2_image.png"></div>
+
+    <div class="info-text home-text">
+        <h3>Fill Your Bag</h3>
+        <p>Fill your Manja bag with snacks,<br/>beverages, and even team swag.</p>
+    </div>
+
+  </ion-slide>
+
+
+  <ion-slide class="padding blue-bg">
+    <div class="box"><img class="tutorial-image" style="padding-top: 60px;" src="img/T3_image.png"></div>
+
+    <div class="info-text home-text">
+        <h3>Enter Your Seat</h3>
+        <p>Add your section, row, and<br/>seat and our runners will be there in no time!</p>
+    </div>
+
+  </ion-slide>
+
+
+
+    <ion-slide class="padding blue-bg">
+    <img src="img/T4_image.png" style="width: 35vh; height: auto; padding-top: 25px;">
+
+
+
+    <h3 class="light-text" style="padding-top: 25px;">Lets Go</h3>
+    <p class="light-text">No more lines. No more missed<br/>plays. Enjoy the game the way<br/>it was meant.</p>
+  <div class="row">
+    <button class="button button-light button-block blue-text" ui-sref="startHome" ng-click="startApp()">Get Started</button>
+  </div>
+
+  <div class="row">
+      <button class="button button-outline button-block" ui-sref="login" ng-click="startApp()">Login</button>
+  </div>
+
+    </div>
+
+
+
+  </ion-slide>
+
+</ion-slide-box>
+
+
+
+  </ion-content>
+</ion-view>

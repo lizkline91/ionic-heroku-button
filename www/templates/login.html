@@ -1,0 +1,60 @@
+<ion-view view-title="Sign In">
+
+    <ion-nav-bar class="bar-stable" align-title="center">
+      <ion-nav-buttons side="left">
+      <button ui-sref="loginHome" class="button button-icon icon ion-android-arrow-back"></button>
+      </ion-nav-buttons>
+
+    </ion-nav-bar>
+
+
+  <form name="register">
+
+  <ion-content class="padding">
+    <div class="row row-center">
+    <div class="col col-80 col-offset-10" style="text-align: center;"><img src="img/manja.png" style="width: 200px;">
+    </div>
+    </div>
+
+
+
+    <div class="list">
+    <label class="item item-input top">
+    <input class="placeholder-center" type="email" placeholder="Email" ng-model="login.username" style="margin-right: -47px;" name="name" required>
+    </label>
+
+    <div class="item item-input bottom">
+    <div class="row no-padding">
+    <div class="col-90 no-padding">
+    <label>
+    <input class="placeholder-center" type="password" placeholder="Password" ng-model="login.password" style="margin-right: -30px;">
+    </label>
+    </div>
+
+
+    <div class="col-10 text-right no-padding">
+    <button class="button button-icon ion-ios-help-outline" ui-sref="reset" formnovalidate></button>
+    </div>
+    </div>
+    </div>
+
+    </div>
+
+      <div class="row row-center">
+  <div class="col col-70 col-offset-15" style="text-align: center;">
+    <button class="button button-light button-block fb-font" ui-sref="fb-login"><small>SIGN IN VIA FACEBOOK</small></button>
+  </div>
+  </div>
+
+
+  </ion-content>
+
+<div class="bar bar-footer bar-balanced" ng-show="!register.name.$error.required"  ng-click="signin()">
+  <div class="title" style="padding-top: 5px;"><button class="button button-clear" ng-click="signin()">OK</button></div>
+
+</div>
+
+</form>
+
+
+</ion-view>

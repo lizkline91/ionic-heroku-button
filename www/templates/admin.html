@@ -1,0 +1,158 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+
+
+<ion-side-menus enable-menu-with-back-views="true">
+
+<ion-side-menu-content class="stuck">
+
+<ion-header-bar class="bar-positive" align-title="center">
+
+      <h1 class="title" ng-if="choice.time">Order {{choice.time}}</h1>
+      <h1 class="title" ng-if="!choice.time">Admin Panel</h1>
+
+</ion-header-bar>
+
+<ion-content class="padding">
+
+<div ng-if="!choice">
+
+	<div class="row row-center" style="margin-top: 20%;">
+	<h1 class="col col-80 col-offset-10" style="text-align: center;"><i class="icon ion-android-search"></i>
+	</h1>
+	</div>
+
+	<div class="row row-center">
+	<div class="col col-80 col-offset-10 home-text">
+	<h2 class="grey">Click an order to view details</h2>
+	</div>
+	</div>
+
+</div>
+
+<div class="row" ng-if="choice">
+
+  <div class="col col-60">
+  Michael Maxsenti
+  </div>
+
+  <div class="col col-10">
+  Section {{choice.section}}
+  </div>
+
+  <div class="col col-10">
+  Row {{choice.row}}
+  </div>
+
+  <div class="col col-10">
+  Seat {{choice.seat}}
+  </div>
+
+</div>
+
+<ul class="list">
+    <li class="item" ng-repeat="product in choice.products">
+      <div class="row">
+
+        <div class="col col-30">
+          <div class="item drink-bg text-center">
+            <img ng-src={{product.image}} style="height: 80px;">
+          </div>
+        </div>
+
+        <div class="col col-30">
+          <div class="item" style="border: none;">
+            <strong>{{product.title}}</strong><br/>
+            <small>{{product.description}}</small><br/><br/>
+            <div class="row" style="padding-left: 0px">
+            <div class="col" style="padding-left: 0px">
+              <p>Qt: {{product.quantity}}</p>
+            </div>
+            <div class="col" style="padding-left: 0px">
+              <p>${{product.price}}</p>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col col-40">
+          <div class="row" style="padding-top: 35px">
+                <div class="col text-center">
+                  <h1 style="font-size: 24px;">${{product.quantity * product.price}}</h1>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </li>
+  </ul>
+
+  <button class="button button-block button-balanced" ng-if="choice" ng-show="choice.status === 'open'" ng-click="move(choice)">Out For Delivery</button>
+  <button class="button button-block button-balanced" ng-if="choice" ng-show="choice.status === 'closed'" ng-click="remove(choice)">Remove Order</button>
+
+
+</ion-content>
+
+</ion-side-menu-content>
+
+<!-- Left menu -->
+<ion-side-menu side="left">
+<ion-tabs class="tabs-clear tabs-icon-only">
+
+  <ion-tab title="Open" icon-on="ion-android-drafts" icon-off="ion-android-drafts">
+
+    <ion-content>
+      <ul class="list">
+
+      <div class="row">
+      <div class="col col-50 col-offset-25 text-center">
+          <img src="img/manja.png" style="width: 100px">
+      </div>
+      </div>
+
+
+        <ion-radio class="mine" icon="none" ng-repeat="(key, value) in orders" ng-show="value.status === 'open'" ng-click="select(key, value)">
+          <i class="icon ion-record balanced"></i>
+          <b class="padding-left grey">{{value.time}}</b>
+        </ion-radio>
+
+      </ul>
+
+    </ion-content>
+
+  </ion-tab>
+
+  <ion-tab title="Closed" icon-on="ion-android-mail" icon-off="ion-android-mail">
+    <ion-content>
+      <ul class="list">
+
+      <div class="row">
+      <div class="col col-50 col-offset-25 text-center">
+          <img src="img/manja.png" style="width: 100px">
+      </div>
+      </div>
+
+
+        <ion-radio class="mine" icon="none" ng-repeat="(key, value) in orders" ng-show="value.status === 'closed'" ng-click="select(key, value)">
+          <i class="icon ion-record assertive"></i>
+          <b class="padding-left grey">{{value.time}}</b>
+        </ion-radio>
+
+      </ul>
+
+    </ion-content>
+  </ion-tab>
+
+
+</ion-tabs>
+
+
+
+</ion-side-menu>
+
+</ion-side-menus>
+

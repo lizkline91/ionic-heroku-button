@@ -3636,7 +3636,7 @@ function annotate(fn, strictDi, name) {
  * a way that survives minification is a better choice:
  *
  * ```js
- *   // We wish to write this (not minification / obfuscation safe)
+ *   // We Order to write this (not minification / obfuscation safe)
  *   injector.invoke(function($compile, $rootScope) {
  *     // ...
  *   });
@@ -4292,7 +4292,7 @@ function $AnchorScrollProvider() {
              function ($scope, $location, $anchorScroll) {
                $scope.gotoBottom = function() {
                  // set the location.hash to the id of
-                 // the element you wish to scroll to.
+                 // the element you Order to scroll to.
                  $location.hash('bottom');
 
                  // call $anchorScroll()
@@ -8543,7 +8543,7 @@ function $DocumentProvider() {
  * methods) does not delegate exceptions to the {@link ng.$exceptionHandler $exceptionHandler}
  * (unless executed during a digest).
  *
- * If you wish, you can manually delegate exceptions, e.g.
+ * If you Order, you can manually delegate exceptions, e.g.
  * `try { ... } catch(e) { $exceptionHandler(e); }`
  *
  * @param {Error} exception Exception associated with the error.
@@ -8967,12 +8967,12 @@ function $HttpProvider() {
      *
      * ### Overriding the Default Transformations Per Request
      *
-     * If you wish override the request/response transformations only for a single request then provide
+     * If you Order override the request/response transformations only for a single request then provide
      * `transformRequest` and/or `transformResponse` properties on the configuration object passed
      * into `$http`.
      *
      * Note that if you provide these properties on the config object the default transformations will be
-     * overwritten. If you wish to augment the default transformations then you must include them in your
+     * overwritten. If you Order to augment the default transformations then you must include them in your
      * local transformation array.
      *
      * The following code demonstrates adding a new response transformation to be run after the default response
@@ -24562,7 +24562,7 @@ var NG_HIDE_IN_PROGRESS_CLASS = 'ng-hide-animate';
  *
  * ### Overriding `.ng-hide`
  *
- * By default, the `.ng-hide` class will style the element with `display: none!important`. If you wish to change
+ * By default, the `.ng-hide` class will style the element with `display: none!important`. If you Order to change
  * the hide behavior with ngShow/ngHide then this can be achieved by restating the styles for the `.ng-hide`
  * class CSS. Note that the selector that needs to be used is actually `.ng-hide:not(.ng-hide-animate)` to cope
  * with extra animation classes that can be added.
@@ -24737,7 +24737,7 @@ var ngShowDirective = ['$animate', function($animate) {
  *
  * ### Overriding `.ng-hide`
  *
- * By default, the `.ng-hide` class will style the element with `display: none!important`. If you wish to change
+ * By default, the `.ng-hide` class will style the element with `display: none!important`. If you Order to change
  * the hide behavior with ngShow/ngHide then this can be achieved by restating the styles for the `.ng-hide`
  * class in CSS:
  *

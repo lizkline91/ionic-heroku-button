@@ -1,0 +1,46 @@
+<ion-view view-title="Recover Password">
+
+    <ion-nav-bar class="bar-stable" align-title="center">
+      <ion-nav-buttons side="left">
+      <button ui-sref="login" class="button button-icon icon ion-android-arrow-back"></button>
+      </ion-nav-buttons>
+
+    </ion-nav-bar>
+
+
+  <form name="register">
+
+  <ion-content class="padding">
+    <div class="row row-center">
+    <div class="col col-80 col-offset-10" style="text-align: center;"><img src="img/manja.png" style="width: 200px;">
+    </div>
+    </div>
+
+
+    <div class="row row-center">
+    <div class="col col-80 col-offset-10 home-text"><p>Enter your email address <br/>so we can recover your password.</p>
+    </div>
+    </div>
+
+
+<div class="list">
+
+  <div class="item item-input-inset no-border">
+    <label class="item-input-wrapper">
+      <input type="email" ng-model="email" placeholder="Email" required>
+    </label>
+    <button class="button button-outline button-small" ng-click="reset(email)">
+      Submit
+    </button>
+  </div>
+
+</div>
+
+
+  </ion-content>
+
+
+</form>
+
+
+</ion-view>

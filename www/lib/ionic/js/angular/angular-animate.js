@@ -305,7 +305,7 @@
  * Stagger animations are currently only supported within CSS-defined animations.
  *
  * ## JavaScript-defined Animations
- * In the event that you do not want to use CSS3 transitions or CSS3 animations or if you wish to offer animations on browsers that do not
+ * In the event that you do not want to use CSS3 transitions or CSS3 animations or if you Order to offer animations on browsers that do not
  * yet support CSS transitions/animations, then you can make use of JavaScript animations defined inside of your AngularJS module.
  *
  * ```js

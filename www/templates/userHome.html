@@ -1,0 +1,17 @@
+<ion-view title="Manja">
+
+<ion-nav-bar class="bar-stable" align-title="center">
+	<ion-nav-buttons side="secondary">
+      <button class="button" ng-click="showAddOrder()">
+        Add Order
+      </button>
+    </ion-nav-buttons>
+</ion-nav-bar>
+     <ion-content>
+      	<ul class="list">
+		    <li class="item" ng-repeat="Order in Orderes">
+		      {{Order.Order}}
+		    </li>
+		</ul>
+    </ion-content>
+</ion-view>
